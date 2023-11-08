@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { Component } from 'react';
+import FunctionComponent1 from './FunctionComponent1';
+import ClassComponent2 from './ClassComponent2';
+import FunctionComponentWithChildren from './FunctionComponentWithChildren';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    korisnici: [
+      { ime: 'Korisnik1', godine: 25 },
+      { ime: 'Korisnik2', godine: 30 },
+      { ime: 'Korisnik3', godine: 35 },
+    ],
+  };
+
+  render() {
+    return (
+      <div>
+        <ClassComponent2 ime={this.state.korisnici[0].ime} godine={this.state.korisnici[0].godine} />
+        <FunctionComponentWithChildren ime={this.state.korisnici[1].ime} godine={this.state.korisnici[1].godine}>
+          <p>Dodatni sadržaj koji je proslijeđen kao "children" prop.</p>
+        </FunctionComponentWithChildren>
+      </div>
+    );
+  }
 }
 
 export default App;
