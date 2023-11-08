@@ -1,4 +1,3 @@
-// App.js
 import React, { Component } from 'react';
 import FunctionComponent1 from './FunctionComponent1';
 import ClassComponent2 from './ClassComponent2';

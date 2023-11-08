@@ -1,4 +1,3 @@
-// FunctionComponent1.js
 import React from 'react';
 
 function FunctionComponent1({ ime, godine }) {

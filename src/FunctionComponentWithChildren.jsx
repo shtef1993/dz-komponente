@@ -1,4 +1,3 @@
-// FunctionComponentWithChildren.js
 import React from 'react';
 
 function FunctionComponentWithChildren({ ime, godine, children }) {

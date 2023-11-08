@@ -1,4 +1,3 @@
-// ClassComponent2.js
 import React, { Component } from 'react';
 
 class ClassComponent2 extends Component {
